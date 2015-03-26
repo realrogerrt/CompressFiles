@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "UnCompress";
 }
 <div class="row">
@@ -11,8 +10,14 @@
         <hr />
         @using (Html.BeginForm("UnCompress", "File", FormMethod.Post, new { @class = "", enctype = "multipart/form-data" }))
         {
-            <label>Well..the file first</label>
-            <input type="file" name="compressedFile" value="" />
+            <div class="form-group">
+                <label>Well..the file first</label>
+                <input type="file" name="compressedFile" id="compressedFile" value="" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <input type="submit" name="submit" value="Upload" class="btn btn-primary btn-success form-control" />
+            </div>
         }
     </div>
 

@@ -37,6 +37,6 @@ textarea {
     text-align: center;
 }
 
-#originalFile {
+#originalFile, #compressedFile {
     height:120%;
 }
