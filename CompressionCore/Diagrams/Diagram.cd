@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CompressionCore.Compressor">
+    <Position X="7" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABACCAAAACAAAACQAAAAAgAAgAACEAKBAAQgEAAAA=</HashCode>
+      <FileName>Compressor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CompressionCore.GenericNode">
+    <Position X="3.75" Y="0.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GenericNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CompressionCore.LeafNode">
+    <Position X="3.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>LeafNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CompressionCore.NonLeafNode">
+    <Position X="5.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACACAAAAAAAA=</HashCode>
+      <FileName>NonLeafNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CompressionCore.UnCompressor">
+    <Position X="11.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAAAgAAAAAACAAAAAAgEAAAA=</HashCode>
+      <FileName>UnCompressor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CompressionCore.Util.GreatComparer">
+    <Position X="13.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Util\GreatComparer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CompressionCore.Util.UtilFunctions">
+    <Position X="13.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Util\GreatComparer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CompressionCore.Util.PriorityQueue&lt;T&gt;">
+    <Position X="13.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Util\PriorityQueue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CompressionCore.FileHandler">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAEAgBAAAAAAAAAAAAgEEIAA=</HashCode>
+      <FileName>FileHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CompressionCore.Util.BitIterator">
+    <Position X="9.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAABAAAAAAAAAACAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Util\BitIterator.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

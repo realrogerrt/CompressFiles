@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "UnCompress";
+}
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <h1>Welcome</h1>
+        <p class="lead">You want your files back, right?</p>
+        <p>We are the other guys, we fix the mistakes and return your files to the original state.</p>
+        <p>To begin the reverse process, give us away a compressed file.</p>
+        <hr />
+        @using (Html.BeginForm("UnCompress", "File", FormMethod.Post, new { @class = "", enctype = "multipart/form-data" }))
+        {
+            <label>Well..the file first</label>
+            <input type="file" name="compressedFile" value="" />
+        }
+    </div>
+
+</div>
