@@ -20,7 +20,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/08/2015 19:42:38</publishTime>
     </File>
     <File Include="bin/CompressFiles.dll">
-      <publishTime>03/26/2015 11:44:40</publishTime>
+      <publishTime>03/26/2015 13:31:37</publishTime>
     </File>
     <File Include="bin/CompressionAlgorithmCore.dll">
       <publishTime>03/09/2015 22:10:31</publishTime>
@@ -221,7 +221,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/26/2015 09:22:31</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>03/26/2015 08:36:24</publishTime>
+      <publishTime>03/26/2015 13:36:27</publishTime>
     </File>
     <File Include="Views/Home/UnCompress.cshtml">
       <publishTime>03/26/2015 08:56:31</publishTime>
