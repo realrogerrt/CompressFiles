@@ -20,13 +20,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/08/2015 19:42:38</publishTime>
     </File>
     <File Include="bin/CompressFiles.dll">
-      <publishTime>03/19/2015 14:37:45</publishTime>
+      <publishTime>03/26/2015 11:44:40</publishTime>
     </File>
     <File Include="bin/CompressionAlgorithmCore.dll">
       <publishTime>03/09/2015 22:10:31</publishTime>
     </File>
     <File Include="bin/CompressionCore.dll">
-      <publishTime>03/19/2015 14:37:39</publishTime>
+      <publishTime>03/26/2015 11:44:38</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>03/08/2015 19:42:47</publishTime>
@@ -110,10 +110,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/08/2015 19:42:20</publishTime>
     </File>
     <File Include="Content/me.jpg">
-      <publishTime>03/11/2015 23:51:44</publishTime>
+      <publishTime>03/26/2015 09:17:23</publishTime>
     </File>
     <File Include="Content/Site.css">
-      <publishTime>03/14/2015 16:50:21</publishTime>
+      <publishTime>03/26/2015 08:38:30</publishTime>
     </File>
     <File Include="Content/workmen.png">
       <publishTime>03/14/2015 16:29:46</publishTime>
@@ -194,10 +194,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/08/2015 19:42:45</publishTime>
     </File>
     <File Include="Views/Account/Login.cshtml">
-      <publishTime>03/08/2015 20:18:13</publishTime>
+      <publishTime>03/26/2015 08:52:52</publishTime>
     </File>
     <File Include="Views/Account/Register.cshtml">
-      <publishTime>03/08/2015 20:19:37</publishTime>
+      <publishTime>03/26/2015 08:53:32</publishTime>
     </File>
     <File Include="Views/Account/ResetPassword.cshtml">
       <publishTime>03/08/2015 19:42:45</publishTime>
@@ -215,16 +215,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/08/2015 19:42:45</publishTime>
     </File>
     <File Include="Views/Home/About.cshtml">
-      <publishTime>03/14/2015 16:47:21</publishTime>
+      <publishTime>03/26/2015 08:58:14</publishTime>
     </File>
     <File Include="Views/Home/Contact.cshtml">
-      <publishTime>03/12/2015 00:13:17</publishTime>
+      <publishTime>03/26/2015 09:22:31</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>03/19/2015 14:37:37</publishTime>
+      <publishTime>03/26/2015 08:36:24</publishTime>
     </File>
     <File Include="Views/Home/UnCompress.cshtml">
-      <publishTime>03/08/2015 20:48:56</publishTime>
+      <publishTime>03/26/2015 08:56:31</publishTime>
     </File>
     <File Include="Views/Manage/AddPhoneNumber.cshtml">
       <publishTime>03/08/2015 19:42:45</publishTime>
@@ -251,19 +251,19 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/08/2015 19:42:45</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>03/10/2015 13:41:51</publishTime>
+      <publishTime>03/26/2015 08:51:22</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
       <publishTime>03/08/2015 19:42:46</publishTime>
     </File>
     <File Include="Views/Web.config">
-      <publishTime>03/09/2015 22:33:00</publishTime>
+      <publishTime>03/08/2015 19:42:11</publishTime>
     </File>
     <File Include="Views/_ViewStart.cshtml">
       <publishTime>03/08/2015 19:42:11</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>03/11/2015 23:05:01</publishTime>
+      <publishTime>03/26/2015 11:44:44</publishTime>
     </File>
   </ItemGroup>
 </Project>
