@@ -23,7 +23,7 @@ namespace CompressFiles.Controllers
             var name = Path.Combine(serverData,fileName);
             //return Json("Good 'til here");
             originalFile.SaveAs(name);
-            var fileStream = new FileStream(name, FileMode.Open);
+            originalFile.InputStream.Close();
             return Json("OK");
         }
 
