@@ -1,4 +1,7 @@
-﻿//Ajax upload handler:
+﻿/// <reference path="jquery-1.10.2.js" />
+
+
+//Ajax upload handler:
 
 $(function () {
     var files;
