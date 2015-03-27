@@ -4,33 +4,16 @@
 //Ajax upload handler:
 
 $(function () {
-    var files;
-    $("#submit-file").on("change", function (ev) {
-        files = ev.target.files;
+
+    $("#submit-file").click(function (ev) {
+        ev.preventDefault();
+        var data;
+        $("originalFile").data(data);
+        console.log(data);
+        var grandPa = $(this).parent().parent();
+        grandPa.prev().html("Uploading..");
+        grandPa.children().remove();
     });
 
-    $("form").on("submit", asyncUpload);
-
-    function asyncUpload(ev) {
-        ev.defaultPrevented();
-        var data = new FormData();
-        $.each(files, function (k, v) {
-            data.append(k, v);
-        });
-
-        $.ajax({
-            url: "/File/FileHandler",
-            type: "POST",
-            data: data,
-            success: function (e) {
-                alert("success");
-            },
-            error: function (e) {
-                alert("fail");
-            }
-        });
-    };
-
-    alert("reached the end");
-
+    console.log("reached the end");
 });
