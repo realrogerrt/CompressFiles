@@ -8,13 +8,6 @@ namespace CompressFiles.Controllers
 {
     public class HomeController : Controller
     {
-        public class InnerController : Controller
-        {
-            public string roger()
-            {
-                return "Roger!";
-            }
-        }
         public ActionResult Index()
         {
             return View();
