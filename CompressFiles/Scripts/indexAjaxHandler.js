@@ -10,6 +10,7 @@ $(function () {
     function completeHandler(res) {
         console.log("Success");
         console.log(res);
+        $("form").prev().text("Upload complete!");
     }
     function errorHandler(ev,type, msg) {
         console.log("Error");
@@ -23,7 +24,10 @@ $(function () {
         var loaded = ev.loaded;
         var total = ev.total;
         var percent = (loaded * 100) / total;
-        $("#upload-progress-bar").css({ width: percent + "%" });
+        var bar = $("#upload-progress-bar");
+        bar.css({ width: percent + "%" });
+        percent = Math.floor(percent)
+        bar.text(percent + "%");
     }
     $("#submit-file").click(function (ev) {
         ev.preventDefault();
@@ -33,6 +37,7 @@ $(function () {
         grandPa.children().remove();
         var progressBar = '<div class="progress">\
   <div id="upload-progress-bar" class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:0%;">\
+  0%\
   </div>\
 </div>';
         grandPa.append(progressBar);
