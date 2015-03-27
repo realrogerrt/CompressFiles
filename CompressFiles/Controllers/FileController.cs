@@ -18,8 +18,11 @@ namespace CompressFiles.Controllers
         [HttpPost]
         public ContentResult FileHandler(HttpPostedFileBase originalFile)
         {
-            var name = "~/App_Data/"+ originalFile.FileName;
+            var fileName = Path.GetFileName(originalFile.FileName);
+            var serverData = Server.MapPath("~/App_Data");
+            var name = Path.Combine(serverData,fileName);
             originalFile.SaveAs(name);
+            var fileStream = new FileStream(name, FileMode.Open);
             return Content("OK");
         }
 

@@ -7,11 +7,15 @@ $(function () {
     function beforeSendHandler() {
         console.log("Before");
     }
-    function completeHandler() {
+    function completeHandler(res) {
         console.log("Success");
+        console.log(res);
     }
-    function errorHandler() {
+    function errorHandler(ev,type, msg) {
         console.log("Error");
+        console.log(ev);
+        console.log(type);
+        console.log(msg);
     }
     function progressHandlingFunction(ev) {
         console.log("progress:");
