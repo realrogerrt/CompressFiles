@@ -146,7 +146,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/08/2015 19:42:20</publishTime>
     </File>
     <File Include="Scripts/indexAjaxHandler.js">
-      <publishTime>03/27/2015 11:19:33</publishTime>
+      <publishTime>03/27/2015 11:35:51</publishTime>
     </File>
     <File Include="Scripts/jquery-1.10.2.js">
       <publishTime>03/08/2015 19:42:22</publishTime>
