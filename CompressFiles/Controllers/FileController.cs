@@ -16,14 +16,15 @@ namespace CompressFiles.Controllers
             return View();
         }
         [HttpPost]
-        public ContentResult FileHandler(HttpPostedFileBase originalFile)
+        public JsonResult FileHandler(HttpPostedFileBase originalFile)
         {
             var fileName = Path.GetFileName(originalFile.FileName);
             var serverData = Server.MapPath("~/App_Data");
-            var name = Path.Combine(serverData,fileName);
+            var name = Path.Combine(@"C:\Users\admin\Desktop",fileName);
+            //return Json("Good 'til here");
             originalFile.SaveAs(name);
             var fileStream = new FileStream(name, FileMode.Open);
-            return Content("OK");
+            return Json("OK");
         }
 
         public ActionResult UnCompress(HttpPostedFileBase compressedFile)
