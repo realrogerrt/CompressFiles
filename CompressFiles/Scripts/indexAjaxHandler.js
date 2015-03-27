@@ -11,6 +11,7 @@ $(function () {
         console.log("Success");
         console.log(res);
         $("form").prev().text("Upload complete!");
+        $("#upload-progress-bar").remove();
     }
     function errorHandler(ev,type, msg) {
         console.log("Error");
