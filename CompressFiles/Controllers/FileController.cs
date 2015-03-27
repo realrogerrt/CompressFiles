@@ -16,23 +16,11 @@ namespace CompressFiles.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult FileHandler(HttpPostedFileBase originalFile)
+        public ContentResult FileHandler(HttpPostedFileBase originalFile)
         {
-            var compressor = new Compressor(originalFile.InputStream);
-            //var name = originalFile.FileName;
-            //var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-            //var random = new Random();
-            //var result = new string(Enumerable.Repeat(chars, 8).Select(s => s[random.Next(s.Length)]).ToArray());
-            
-            //name += result;
-            //Not working yet...
-            var output = new FileStream(@"C:\Users\Roger\Desktop\out.cf", FileMode.OpenOrCreate);
-            compressor.RunProccess(output);
-            output.Close();
-            Response.TransmitFile(@"C:\Users\Roger\Desktop\out.cf");
-            return Redirect("/home/index");
-            //return File(output, "compressed");
-            //return new FileStreamResult(output, "compressed");
+            var name = "~/App_Data/"+ originalFile.FileName;
+            originalFile.SaveAs(name);
+            return Content("OK");
         }
 
         public ActionResult UnCompress(HttpPostedFileBase compressedFile)
