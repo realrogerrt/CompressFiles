@@ -22,6 +22,7 @@ $(function () {
         function handleConvertionSuccess() {
             formPrev.text("Successful operation!");
             var anchor = '<a href="/File/GetConvertedFile">Download the converted file here. </a>';
+            $(".progress").remove();
             formPrev.parent().append(anchor);
         }
 
