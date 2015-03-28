@@ -8,7 +8,6 @@
 //I need to organize this javascript like a reusable jquery plugin
 
 $(function () {
-
     function beforeSendHandler() {
         console.log("Before");
     }
