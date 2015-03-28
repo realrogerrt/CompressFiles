@@ -75,3 +75,7 @@ textarea {
     background-color:aqua;
 }
 
+.my-coolbox {
+    background-color: #C6C0C0;
+    border-radius: 20px;
+}
