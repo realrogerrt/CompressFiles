@@ -67,7 +67,7 @@ namespace CompressFiles.Controllers
             var app_data = Server.MapPath("~/App_Data");
             var fileName = (string)HttpContext.Session["originalFilename"];
             var fullName = Path.Combine(app_data, fileName);
-            return File(fullName+".cf", "converted");
+            return File(fullName+".cf", "converted", fileName+".cf");
         }
         public ActionResult UnCompress(HttpPostedFileBase compressedFile)
         {

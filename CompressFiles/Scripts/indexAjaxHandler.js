@@ -13,11 +13,11 @@ $(function () {
         var formPrev = $("form").prev();
         formPrev.text("Upload complete!");
         $("#upload-progress-bar").css({ width: "0%" });
-        setTimeout(function () {
+        //setTimeout(function () {
             formPrev.fadeOut();
             formPrev.text("Compressing..");
             formPrev.fadeIn();
-        }, 1000);
+        //}, 1000);
         //Convertion way ajax
         function handleConvertionSuccess() {
             formPrev.text("Successful operation!");
