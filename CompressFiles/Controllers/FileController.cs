@@ -11,6 +11,12 @@ namespace CompressFiles.Controllers
     public class FileController : Controller
     {
         // GET: File
+        //public FileController(): base()
+        //{
+        //    HttpContext.Session.Add("copy", false);
+        //    HttpContext.Session.Add("convertion", false);
+        //}
+
         public ActionResult Index()
         {
             return View();
@@ -26,7 +32,6 @@ namespace CompressFiles.Controllers
             originalFile.InputStream.Close(); 
             HttpContext.Session.Add("originalFilename", fileName);
             HttpContext.Session.Add("copy", true);
-
             return Json("OK");
         }
 
@@ -41,11 +46,28 @@ namespace CompressFiles.Controllers
             var fileName = (string)HttpContext.Session["originalFilename"];
             var fullName = Path.Combine(app_data,fileName);
             var fileStream = new FileStream(fullName,FileMode.Open);
-            var output = new FileStream(fileName + ".cf", FileMode.Create);
-            var converter = new Compressor(fileName);
+            var output = new FileStream(fullName + ".cf", FileMode.Create);
+            var converter = new Compressor(fileStream);
             converter.RunProccess(output);
+            output.Close();
+            fileStream.Close();
             HttpContext.Session.Add("convertion", true);
             return Json("OK");
+        }
+
+        public FileResult GetConvertedFile()
+        {
+            var obj = HttpContext.Session["convertion"];
+            bool converted = false;
+            if (obj != null) converted = true;
+            if (!converted)
+            {
+                throw new InvalidOperationException("File hasn't converted yet!");
+            }
+            var app_data = Server.MapPath("~/App_Data");
+            var fileName = (string)HttpContext.Session["originalFilename"];
+            var fullName = Path.Combine(app_data, fileName);
+            return File(fullName+"cf", "converted");
         }
         public ActionResult UnCompress(HttpPostedFileBase compressedFile)
         {
@@ -56,5 +78,6 @@ namespace CompressFiles.Controllers
         {
             return View();
         }
+
     }
 }

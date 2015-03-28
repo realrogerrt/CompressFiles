@@ -18,6 +18,23 @@ $(function () {
             formPrev.text("Compressing..");
             formPrev.fadeIn();
         }, 1000);
+        //Convertion way ajax
+        function handleConvertionSuccess() {
+            alert("!!!!!!!!!!!!!!");
+            formPrev.text("Successful operation!");
+            var anchor = '<a href="/File/GetConvertedFile">Download the converted file here. </a>';
+            formPrev.parent().append(anchor);
+        }
+
+        function handleConvertionFail() {
+            alert("Something wrong happened :(");
+        }
+        $.ajax({
+            type: "Post",
+            url: "/File/Converter",
+            success: handleConvertionSuccess,
+            error: handleConvertionFail,
+        });
     }
     function errorHandler(ev,type, msg) {
         console.log("Error");
