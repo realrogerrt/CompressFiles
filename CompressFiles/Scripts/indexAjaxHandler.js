@@ -20,7 +20,6 @@ $(function () {
         }, 1000);
         //Convertion way ajax
         function handleConvertionSuccess() {
-            alert("!!!!!!!!!!!!!!");
             formPrev.text("Successful operation!");
             var anchor = '<a href="/File/GetConvertedFile">Download the converted file here. </a>';
             formPrev.parent().append(anchor);
