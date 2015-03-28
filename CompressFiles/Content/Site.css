@@ -41,3 +41,24 @@ textarea {
     height:120%;
 }
 
+
+.navbar-inverse {
+    background-color: #2A2C47;
+    border-radius: 0px 0px 20px 20px;
+    border-bottom-color: #4CAE4C;
+}
+
+.btn-primary {
+    background-color: #2A2C47;
+    border-color: #4CAE4C;
+}
+
+.btn {
+    border-radius: 20px 20px;
+}
+
+.btn-primary:hover, .btn-success:hover {
+    background-color: #291F53;
+    border-width: 3px;
+    border-color: #357EBD;
+}
