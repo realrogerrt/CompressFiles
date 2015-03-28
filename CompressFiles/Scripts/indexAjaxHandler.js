@@ -10,8 +10,14 @@ $(function () {
     function completeHandler(res) {
         console.log("Success");
         console.log(res);
-        $("form").prev().text("Upload complete!");
-        $("#upload-progress-bar").remove();
+        var formPrev = $("form").prev();
+        formPrev.text("Upload complete!");
+        $("#upload-progress-bar").css({ width: "0%" });
+        setTimeout(function () {
+            formPrev.fadeOut();
+            formPrev.text("Compressing..");
+            formPrev.fadeIn();
+        }, 1000);
     }
     function errorHandler(ev,type, msg) {
         console.log("Error");
