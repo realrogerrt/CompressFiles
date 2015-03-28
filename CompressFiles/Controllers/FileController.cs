@@ -81,7 +81,7 @@ namespace CompressFiles.Controllers
         }
 
         [HttpPost]
-        public JsonResult PostCompressedFile(HttpPostedFile compressedFile)
+        public JsonResult PostCompressedFile(HttpPostedFileBase compressedFile)
         {
             var fileName = Path.GetFileName(compressedFile.FileName);
             var serverData = Server.MapPath("~/App_Data");
@@ -127,6 +127,8 @@ namespace CompressFiles.Controllers
             var app_data = Server.MapPath("~/App_Data");
             var fileName = (string)HttpContext.Session["compressedFilename"];
             var fullName = Path.Combine(app_data, fileName);
+            fullName = fullName.Substring(0, fullName.LastIndexOf('.'));
+            fileName = fileName.Substring(0, fileName.LastIndexOf('.'));
             return File(fullName, "converted", fileName);
         }
     }

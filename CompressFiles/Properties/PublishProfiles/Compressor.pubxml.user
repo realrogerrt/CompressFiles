@@ -20,7 +20,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/08/2015 19:42:38</publishTime>
     </File>
     <File Include="bin/CompressFiles.dll">
-      <publishTime>03/28/2015 11:39:52</publishTime>
+      <publishTime>03/28/2015 12:03:13</publishTime>
     </File>
     <File Include="bin/CompressionAlgorithmCore.dll">
       <publishTime>03/09/2015 22:10:31</publishTime>
@@ -178,6 +178,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Scripts/respond.min.js">
       <publishTime>03/08/2015 19:42:39</publishTime>
     </File>
+    <File Include="Scripts/unCompressFileHandler.js">
+      <publishTime>03/28/2015 11:58:42</publishTime>
+    </File>
     <File Include="Scripts/_references.js">
       <publishTime>03/08/2015 19:42:37</publishTime>
     </File>
@@ -227,7 +230,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/27/2015 13:05:44</publishTime>
     </File>
     <File Include="Views/Home/UnCompress.cshtml">
-      <publishTime>03/26/2015 16:19:10</publishTime>
+      <publishTime>03/28/2015 12:00:48</publishTime>
     </File>
     <File Include="Views/Manage/AddPhoneNumber.cshtml">
       <publishTime>03/08/2015 19:42:45</publishTime>
