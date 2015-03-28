@@ -20,7 +20,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/08/2015 19:42:38</publishTime>
     </File>
     <File Include="bin/CompressFiles.dll">
-      <publishTime>03/28/2015 09:44:56</publishTime>
+      <publishTime>03/28/2015 09:57:57</publishTime>
     </File>
     <File Include="bin/CompressionAlgorithmCore.dll">
       <publishTime>03/09/2015 22:10:31</publishTime>
@@ -146,7 +146,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/08/2015 19:42:20</publishTime>
     </File>
     <File Include="Scripts/indexAjaxHandler.js">
-      <publishTime>03/28/2015 09:42:20</publishTime>
+      <publishTime>03/28/2015 09:54:32</publishTime>
     </File>
     <File Include="Scripts/jquery-1.10.2.js">
       <publishTime>03/08/2015 19:42:22</publishTime>

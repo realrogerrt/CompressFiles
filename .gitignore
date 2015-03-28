@@ -16,6 +16,10 @@ $RECYCLE.BIN/
 *.dll
 *.obj
 *.exe
+#MS SQL databases files
+
+*.mdf
+*.ldf
 
 # Windows shortcuts
 *.lnk
