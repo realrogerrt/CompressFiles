@@ -16,7 +16,7 @@ namespace CompressFiles.Controllers
         //    HttpContext.Session.Add("copy", false);
         //    HttpContext.Session.Add("convertion", false);
         //}
-
+        //Modify this controller to make it more reusable and reduce boilerplate code.
         public ActionResult Index()
         {
             return View();

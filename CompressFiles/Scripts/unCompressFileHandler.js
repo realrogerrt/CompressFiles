@@ -5,6 +5,8 @@
 
 //Ajax upload handler uncompress page:
 
+//I need to organize this javascript like a reusable jquery plugin
+
 $(function () {
 
     function beforeSendHandler() {
