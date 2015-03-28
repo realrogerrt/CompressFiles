@@ -62,3 +62,15 @@ textarea {
     border-width: 3px;
     border-color: #357EBD;
 }
+
+.navbar-inverse .navbar-toggle .icon-bar {
+    background-color: #73924E;
+}
+
+.navbar-inverse .navbar-toggle {
+    border-color: #6E9F72;
+}
+
+.navbar-toggle:hover {
+    background-color:aqua;
+}

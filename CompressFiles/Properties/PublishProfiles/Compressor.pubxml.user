@@ -20,7 +20,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/08/2015 19:42:38</publishTime>
     </File>
     <File Include="bin/CompressFiles.dll">
-      <publishTime>03/28/2015 12:26:00</publishTime>
+      <publishTime>03/28/2015 15:30:45</publishTime>
     </File>
     <File Include="bin/CompressionAlgorithmCore.dll">
       <publishTime>03/09/2015 22:10:31</publishTime>
@@ -113,7 +113,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/26/2015 09:17:23</publishTime>
     </File>
     <File Include="Content/Site.css">
-      <publishTime>03/27/2015 07:42:09</publishTime>
+      <publishTime>03/28/2015 15:29:06</publishTime>
     </File>
     <File Include="Content/workmen.png">
       <publishTime>03/14/2015 16:29:46</publishTime>
@@ -179,7 +179,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/08/2015 19:42:39</publishTime>
     </File>
     <File Include="Scripts/unCompressFileHandler.js">
-      <publishTime>03/28/2015 11:58:42</publishTime>
+      <publishTime>03/28/2015 12:31:57</publishTime>
     </File>
     <File Include="Scripts/_references.js">
       <publishTime>03/08/2015 19:42:37</publishTime>
