@@ -26,7 +26,7 @@ $(function () {
         //Convertion way ajax
         function handleConvertionSuccess() {
             formPrev.text("Successful operation!");
-            var anchor = '<a href="/File/GetOriginal">Download the converted file here. </a>';
+            var anchor = '<a href="/File/GetOriginal">Download the original file here. </a>';
             $(".progress").remove();
             formPrev.parent().append(anchor);
         }
