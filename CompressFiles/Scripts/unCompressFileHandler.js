@@ -20,7 +20,7 @@ $(function () {
         $("#upload-progress-bar").css({ width: "0%" });
         //setTimeout(function () {
         formPrev.fadeOut();
-        formPrev.text("Compressing..");
+        formPrev.text("Uncompressing..");
         formPrev.fadeIn();
         //}, 1000);
         //Convertion way ajax
