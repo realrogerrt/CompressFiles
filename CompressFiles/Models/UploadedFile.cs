@@ -14,7 +14,7 @@ namespace CompressFiles.Models
         [StringLength(15)]
         [Required]
         public string FileName { get; set; }
-        [StringLength(3)]
+        [StringLength(4)]
         public string Extension { get; set; }
         public DateTime DateTime { get; set; }
         [Required]
@@ -25,15 +25,4 @@ namespace CompressFiles.Models
         public string OwnerUserID { get; set; }
         public ApplicationUser OwnerUser { get; set; }
     }
-
-    //public class UpLoadedFileContext : DbContext
-    //{
-    //    public virtual DbSet<UploadedFile> Files { get; set; }
-
-    //    public UpLoadedFileContext() : base("DefaultConnection") { }
-
-    //    protected override void OnModelCreating(DbModelBuilder modelBuilder)
-    //    {
-    //    }
-    //}
 }

@@ -69,8 +69,17 @@ namespace CompressFiles.Controllers
                 toSave.DateTime = DateTime.Now;
                 toSave.OwnerUser = user;
                 ac.AllFiles.Add(toSave);
-                user.Files.Add(toSave);
-                ac.SaveChanges();
+                //user.Files.Add(toSave);
+                try
+                {
+                    ac.SaveChanges();
+                }
+                catch (Exception e)
+                {
+                    var rr = e;
+                    throw;
+                }
+                
             }
             output.Close();
             fileStream.Close();
@@ -96,11 +105,7 @@ namespace CompressFiles.Controllers
         {
             return View();
         }
-        //Get the information of the logged user from the log in manager
-        public ActionResult Historial()
-        {
-            return View();
-        }
+       
 
         [HttpPost]
         public JsonResult PostCompressedFile(HttpPostedFileBase compressedFile)

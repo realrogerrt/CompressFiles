@@ -15,7 +15,7 @@ $(function () {
     function completeHandler(res) {
         console.log("Success");
         console.log(res);
-        var formPrev = $("form").prev();
+        var formPrev = $("form.main-form").prev();
         formPrev.text("Upload complete!");
         $("#upload-progress-bar").css({ width: "0%" });
         //setTimeout(function () {
@@ -64,7 +64,7 @@ $(function () {
     $("#submit-compressed-file").click(function (ev) {
         ev.preventDefault();
         var grandPa = $(this).parent().parent();//Form tag
-        var formData = new FormData(grandPa);
+        var formData = new FormData($(this).parents("form")[0]);
         grandPa.prev().html("Uploading..");
         grandPa.children().remove();
         var progressBar = '<div class="progress">\

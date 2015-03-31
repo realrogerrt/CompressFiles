@@ -171,6 +171,10 @@
     <Compile Include="Migrations\201503311413456_Initial.Designer.cs">
       <DependentUpon>201503311413456_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201503311438488_Migra.cs" />
+    <Compile Include="Migrations\201503311438488_Migra.Designer.cs">
+      <DependentUpon>201503311438488_Migra.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -246,6 +250,7 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\UnCompress.cshtml" />
+    <Content Include="Views\Home\Historial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\File\" />
@@ -266,6 +271,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201503311413456_Initial.resx">
       <DependentUpon>201503311413456_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503311438488_Migra.resx">
+      <DependentUpon>201503311438488_Migra.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

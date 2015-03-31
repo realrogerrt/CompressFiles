@@ -16,7 +16,7 @@
 <div class="row">
     <div class="col-md-8 col-md-offset-2">
         <h2>Give us away a file..</h2>
-        @using (Html.BeginForm("FileHandler", "File", FormMethod.Post, new { @class = "", enctype = "multipart/form-data" }))
+        @using (Html.BeginForm("FileHandler", "File", FormMethod.Post, new { @class = "main-form", enctype = "multipart/form-data" }))
         {
             <div class="form-group">
                 <label>The file goes right here:</label>

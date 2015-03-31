@@ -1,0 +1,48 @@
+﻿@model IEnumerable<CompressFiles.Models.UploadedFile>
+
+@{
+    ViewBag.Title = "Historial";
+}
+
+<div class="col-md-8 col-md-offset-2 my-coolbox">
+
+    <h2>Your historial in our site</h2>
+
+    @if (Request.IsAuthenticated)
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>File Name</th>
+                    <th>Extension</th>
+                    <th>Upload Time</th>
+                    <th>Size before</th>
+                    <th>Size after</th>
+                    <th>Percent(%)</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    var percent = (float)@item.ConvertedSize * 100 / (float)@item.OriginalSize;
+                    percent = 100 - percent;
+                    <tr>
+                        <th>@item.FileName</th>
+                        <th>@item.Extension</th>
+                        <th>@item.DateTime</th>
+                        <th>@item.OriginalSize Bytes</th>
+                        <th>@item.ConvertedSize Bytes</th>
+                        <th>@percent</th>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+
+    else 
+    { 
+        <p class="danger">You need to log in first.</p>
+    }
+
+
+</div>

@@ -8,7 +8,7 @@
         <p>We are the other guys, we fix the mistakes and return your files to the original state.</p>
         <p>To begin the reverse process, give us away a compressed file.</p>
         <hr />
-        @using (Html.BeginForm("UnCompress", "File", FormMethod.Post, new { @class = "", enctype = "multipart/form-data" }))
+        @using (Html.BeginForm("UnCompress", "File", FormMethod.Post, new { @class = "main-form", enctype = "multipart/form-data" }))
         {
             <div class="form-group">
                 <label>Well..the file first</label>

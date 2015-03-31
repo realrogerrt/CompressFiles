@@ -10,7 +10,7 @@ $(function () {
     function completeHandler(res) {
         console.log("Success");
         console.log(res);
-        var formPrev = $("form").prev();
+        var formPrev = $("form.main-form").prev();
         formPrev.text("Upload complete!");
         $("#upload-progress-bar").css({ width: "0%" });
         //setTimeout(function () {
@@ -26,8 +26,11 @@ $(function () {
             formPrev.parent().append(anchor);
         }
 
-        function handleConvertionFail() {
+        function handleConvertionFail(ev, type, msg) {
             alert("Something wrong happened :(");
+            console.log(ev);
+            console.log(type);
+            console.log(msg);
         }
         $.ajax({
             type: "Post",
