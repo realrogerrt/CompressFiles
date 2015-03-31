@@ -20,7 +20,6 @@ namespace CompressFiles.Controllers
         //}
         //Modify this controller to make it more reusable and reduce boilerplate code.
 
-        private UpLoadedFileContext collection = new UpLoadedFileContext();
 
         public ActionResult Index()
         {
@@ -61,7 +60,6 @@ namespace CompressFiles.Controllers
             {
                 string ID = User.Identity.GetUserId();
                 var ac = new ApplicationDbContext();
-                var fc = new UpLoadedFileContext();
                 ApplicationUser user = ac.Users.FirstOrDefault(x => x.Id == ID);
                 var toSave = new UploadedFile();
                 toSave.FileName = fileName;
@@ -70,10 +68,9 @@ namespace CompressFiles.Controllers
                 toSave.ConvertedSize = (int)output.Length;
                 toSave.DateTime = DateTime.Now;
                 toSave.OwnerUser = user;
-                fc.Files.Add(toSave);
+                ac.AllFiles.Add(toSave);
                 user.Files.Add(toSave);
                 ac.SaveChanges();
-                fc.SaveChanges();
             }
             output.Close();
             fileStream.Close();

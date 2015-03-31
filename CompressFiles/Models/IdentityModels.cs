@@ -18,11 +18,12 @@ namespace CompressFiles.Models
             return userIdentity;
         }
 
-        public ICollection<UploadedFile> Files = new List<UploadedFile>();
+        public ICollection<UploadedFile> Files { get; set; }
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public virtual DbSet<UploadedFile> AllFiles { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
@@ -32,5 +33,13 @@ namespace CompressFiles.Models
         {
             return new ApplicationDbContext();
         }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<UploadedFile>().HasOptional<ApplicationUser>(f => f.OwnerUser)
+                .WithMany(ap => ap.Files).HasForeignKey(f => f.OwnerUserID);
+        }
+        
     }
 }

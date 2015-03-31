@@ -167,21 +167,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201503091703016_Identity.cs" />
-    <Compile Include="Migrations\201503091703016_Identity.Designer.cs">
-      <DependentUpon>201503091703016_Identity.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201503310159559_fileModel.cs" />
-    <Compile Include="Migrations\201503310159559_fileModel.Designer.cs">
-      <DependentUpon>201503310159559_fileModel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201503310232450_Identity1.cs" />
-    <Compile Include="Migrations\201503310232450_Identity1.Designer.cs">
-      <DependentUpon>201503310232450_Identity1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201503311334531_FilesIdentity.cs" />
-    <Compile Include="Migrations\201503311334531_FilesIdentity.Designer.cs">
-      <DependentUpon>201503311334531_FilesIdentity.cs</DependentUpon>
+    <Compile Include="Migrations\201503311413456_Initial.cs" />
+    <Compile Include="Migrations\201503311413456_Initial.Designer.cs">
+      <DependentUpon>201503311413456_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -270,24 +258,15 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201503091703016_Identity.resx">
-      <DependentUpon>201503091703016_Identity.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201503310159559_fileModel.resx">
-      <DependentUpon>201503310159559_fileModel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201503310232450_Identity1.resx">
-      <DependentUpon>201503310232450_Identity1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201503311334531_FilesIdentity.resx">
-      <DependentUpon>201503311334531_FilesIdentity.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\CompressionCore\CompressionCore.csproj">
       <Project>{0a6a5f96-105d-4d06-8121-a961b06330fe}</Project>
       <Name>CompressionCore</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201503311413456_Initial.resx">
+      <DependentUpon>201503311413456_Initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

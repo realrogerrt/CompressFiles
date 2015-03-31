@@ -22,20 +22,18 @@ namespace CompressFiles.Models
         [Required]
         public int ConvertedSize { get; set; }
 
-        public int OwnerUserID { get; set; }
+        public string OwnerUserID { get; set; }
         public ApplicationUser OwnerUser { get; set; }
     }
 
-    public class UpLoadedFileContext : DbContext
-    {
-        public virtual DbSet<UploadedFile> Files { get; set; }
+    //public class UpLoadedFileContext : DbContext
+    //{
+    //    public virtual DbSet<UploadedFile> Files { get; set; }
 
-        public UpLoadedFileContext() : base("DefaultConnection") { }
+    //    public UpLoadedFileContext() : base("DefaultConnection") { }
 
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<UploadedFile>().HasOptional<ApplicationUser>(f => f.OwnerUser)
-                .WithMany(ap => ap.Files).HasForeignKey(f => f.OwnerUserID);
-        }
-    }
+    //    protected override void OnModelCreating(DbModelBuilder modelBuilder)
+    //    {
+    //    }
+    //}
 }
