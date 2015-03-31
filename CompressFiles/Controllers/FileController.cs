@@ -1,10 +1,12 @@
-﻿using CompressionCore;
+﻿using CompressFiles.Models;
+using CompressionCore;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Microsoft.AspNet.Identity;
 
 namespace CompressFiles.Controllers
 {
@@ -17,6 +19,9 @@ namespace CompressFiles.Controllers
         //    HttpContext.Session.Add("convertion", false);
         //}
         //Modify this controller to make it more reusable and reduce boilerplate code.
+
+        private UpLoadedFileContext collection = new UpLoadedFileContext();
+
         public ActionResult Index()
         {
             return View();
@@ -52,6 +57,27 @@ namespace CompressFiles.Controllers
             output.Close();
             fileStream.Close();
             HttpContext.Session.Add("convertion", true);
+
+            //Update Db
+            if (Request.IsAuthenticated)
+            {
+                string ID = User.Identity.GetUserId();
+                var ac = new ApplicationDbContext();
+                var fc = new UpLoadedFileContext();
+                ApplicationUser user = ac.Users.FirstOrDefault(x => x.Id == ID);
+                var toSave = new UploadedFile();
+                toSave.FileName = fileName;
+                toSave.Extension = fileName.Substring(fileName.LastIndexOf("."));
+                toSave.OriginalSize = (int)fileStream.Length; //Change to long both o' 'em
+                toSave.ConvertedSize = (int)output.Length;
+                toSave.DateTime = DateTime.Now;
+                toSave.OwnerUser = user;
+                fc.Files.Add(toSave);
+                user.Files.Add(toSave);
+                ac.SaveChanges();
+                fc.SaveChanges();
+            }
+
             return Json("OK");
         }
 
