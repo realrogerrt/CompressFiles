@@ -3,6 +3,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using System.Collections.Generic;
 
 namespace CompressFiles.Models
 {
@@ -16,6 +17,8 @@ namespace CompressFiles.Models
             // Add custom user claims here
             return userIdentity;
         }
+
+        public ICollection<UploadedFile> Files { get; set; }
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
