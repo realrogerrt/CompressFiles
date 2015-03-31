@@ -18,7 +18,7 @@ namespace CompressFiles.Models
             return userIdentity;
         }
 
-        public ICollection<UploadedFile> Files { get; set; }
+        public ICollection<UploadedFile> Files = new List<UploadedFile>();
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>

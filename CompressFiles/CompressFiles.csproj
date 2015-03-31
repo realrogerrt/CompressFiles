@@ -179,6 +179,10 @@
     <Compile Include="Migrations\201503310232450_Identity1.Designer.cs">
       <DependentUpon>201503310232450_Identity1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201503311334531_FilesIdentity.cs" />
+    <Compile Include="Migrations\201503311334531_FilesIdentity.Designer.cs">
+      <DependentUpon>201503311334531_FilesIdentity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -274,6 +278,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201503310232450_Identity1.resx">
       <DependentUpon>201503310232450_Identity1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503311334531_FilesIdentity.resx">
+      <DependentUpon>201503311334531_FilesIdentity.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

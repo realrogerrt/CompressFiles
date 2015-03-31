@@ -54,8 +54,6 @@ namespace CompressFiles.Controllers
             var output = new FileStream(fullName + ".cf", FileMode.Create);
             var converter = new Compressor(fileStream);
             converter.RunProccess(output);
-            output.Close();
-            fileStream.Close();
             HttpContext.Session.Add("convertion", true);
 
             //Update Db
@@ -77,7 +75,8 @@ namespace CompressFiles.Controllers
                 ac.SaveChanges();
                 fc.SaveChanges();
             }
-
+            output.Close();
+            fileStream.Close();
             return Json("OK");
         }
 
