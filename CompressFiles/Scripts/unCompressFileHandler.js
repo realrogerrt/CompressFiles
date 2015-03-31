@@ -64,7 +64,7 @@ $(function () {
     $("#submit-compressed-file").click(function (ev) {
         ev.preventDefault();
         var grandPa = $(this).parent().parent();//Form tag
-        var formData = new FormData($("form")[0]);
+        var formData = new FormData(grandPa);
         grandPa.prev().html("Uploading..");
         grandPa.children().remove();
         var progressBar = '<div class="progress">\
