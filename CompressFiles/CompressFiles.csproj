@@ -175,6 +175,10 @@
     <Compile Include="Migrations\201503311438488_Migra.Designer.cs">
       <DependentUpon>201503311438488_Migra.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201503311806209_ValidationChanges.cs" />
+    <Compile Include="Migrations\201503311806209_ValidationChanges.Designer.cs">
+      <DependentUpon>201503311806209_ValidationChanges.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -274,6 +278,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201503311438488_Migra.resx">
       <DependentUpon>201503311438488_Migra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503311806209_ValidationChanges.resx">
+      <DependentUpon>201503311806209_ValidationChanges.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
