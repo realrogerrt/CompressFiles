@@ -40,12 +40,5 @@ namespace CompressFiles.Controllers
             return View(files.ToList());
         }
     
-        [HttpPost]
-        public ActionResult FileHandlerSync(FileViewModel m)
-        {
-            if (!ModelState.IsValid) return View("Home", m);
-            return Redirect("/");
-        }
-    
     }
 }
