@@ -39,5 +39,13 @@ namespace CompressFiles.Controllers
             var files = from f in ac.AllFiles where f.OwnerUser.Id == ID select f;
             return View(files.ToList());
         }
+    
+        [HttpPost]
+        public ActionResult FileHandlerSync(FileViewModel m)
+        {
+            if (!ModelState.IsValid) return View("Home", m);
+            return Redirect("/");
+        }
+    
     }
 }
