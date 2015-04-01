@@ -20,6 +20,17 @@ namespace CompressFiles.Controllers
         //}
         //Modify this controller to make it more reusable and reduce boilerplate code.
 
+        private string serverData()
+        {
+            return Server.MapPath("~/App_Data");
+        }
+
+        private T getSessionData<T>(string key)
+        {
+            var obj = HttpContext.Session[key];
+            if (obj != null) return (T)obj;
+            return default(T);
+        }
 
         public ActionResult Index()
         {
@@ -29,9 +40,7 @@ namespace CompressFiles.Controllers
         public JsonResult FileHandler(HttpPostedFileBase originalFile)
         {
             var fileName = Path.GetFileName(originalFile.FileName);
-            var serverData = Server.MapPath("~/App_Data");
-            var name = Path.Combine(serverData,fileName);
-            //return Json("Good 'til here");
+            var name = Path.Combine(serverData(),fileName);
             originalFile.SaveAs(name);
             originalFile.InputStream.Close(); 
             HttpContext.Session.Add("originalFilename", fileName);
@@ -41,14 +50,12 @@ namespace CompressFiles.Controllers
 
         public JsonResult Converter()
         {
-            bool copied = (bool)HttpContext.Session["copy"];
-            if (!Request.IsAjaxRequest() || !copied)
+            if (!Request.IsAjaxRequest() || getSessionData<bool>("copy"))
             {
                 throw new Exception("Invalid Call!");
             }
-            var app_data = Server.MapPath("~/App_Data");
-            var fileName = (string)HttpContext.Session["originalFilename"];
-            var fullName = Path.Combine(app_data,fileName);
+            var fileName = getSessionData<string>("originalFilename");
+            var fullName = Path.Combine(serverData(),fileName);
             var fileStream = new FileStream(fullName,FileMode.Open);
             var output = new FileStream(fullName + ".cf", FileMode.Create);
             var converter = new Compressor(fileStream);
@@ -70,16 +77,7 @@ namespace CompressFiles.Controllers
                 toSave.OwnerUser = user;
                 ac.AllFiles.Add(toSave);
                 //user.Files.Add(toSave);
-                try
-                {
-                    ac.SaveChanges();
-                }
-                catch (Exception e)
-                {
-                    var rr = e;
-                    throw;
-                }
-                
+                ac.SaveChanges();
             }
             output.Close();
             fileStream.Close();
@@ -88,10 +86,7 @@ namespace CompressFiles.Controllers
 
         public FileResult GetConvertedFile()
         {
-            var obj = HttpContext.Session["convertion"];
-            bool converted = false;
-            if (obj != null) converted = (bool)obj;
-            if (!converted)
+            if (getSessionData<bool>("convertion"))
             {
                 throw new InvalidOperationException("File hasn't converted yet!");
             }
@@ -111,8 +106,7 @@ namespace CompressFiles.Controllers
         public JsonResult PostCompressedFile(HttpPostedFileBase compressedFile)
         {
             var fileName = Path.GetFileName(compressedFile.FileName);
-            var serverData = Server.MapPath("~/App_Data");
-            var name = Path.Combine(serverData, fileName);
+            var name = Path.Combine(serverData(), fileName);
             //return Json("Good 'til here");
             compressedFile.SaveAs(name);
             compressedFile.InputStream.Close();
@@ -123,14 +117,12 @@ namespace CompressFiles.Controllers
 
         public JsonResult UnCompressAsync()
         {
-            bool copied = (bool)HttpContext.Session["copy_compressed"];
-            if (!Request.IsAjaxRequest() || !copied)
+            if (!Request.IsAjaxRequest() || getSessionData<bool>("copy_compressed"))
             {
                 throw new Exception("Invalid Call!");
             }
-            var app_data = Server.MapPath("~/App_Data");
-            var fileName = (string)HttpContext.Session["compressedFilename"];
-            var fullName = Path.Combine(app_data, fileName);
+            var fileName = getSessionData<string>("compressedFilename");
+            var fullName = Path.Combine(serverData(), fileName);
             var fileStream = new FileStream(fullName, FileMode.Open);
             fullName = fullName.Substring(0, fullName.LastIndexOf('.'));
             var output = new FileStream(fullName, FileMode.Create);
@@ -144,16 +136,12 @@ namespace CompressFiles.Controllers
 
         public FileResult GetOriginal()
         {
-            var obj = HttpContext.Session["convertion_compressed"];
-            bool converted = false;
-            if (obj != null) converted = (bool)obj;
-            if (!converted)
+            if (getSessionData<bool>("convertion_compressed"))
             {
                 throw new InvalidOperationException("File hasn't converted yet!");
             }
-            var app_data = Server.MapPath("~/App_Data");
-            var fileName = (string)HttpContext.Session["compressedFilename"];
-            var fullName = Path.Combine(app_data, fileName);
+            var fileName = getSessionData<string>("compressedFilename");
+            var fullName = Path.Combine(serverData(), fileName);
             fullName = fullName.Substring(0, fullName.LastIndexOf('.'));
             fileName = fileName.Substring(0, fileName.LastIndexOf('.'));
             return File(fullName, "converted", fileName);
