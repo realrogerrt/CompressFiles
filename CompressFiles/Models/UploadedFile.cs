@@ -16,7 +16,7 @@ namespace CompressFiles.Models
         [Required]
         public string FileName { get; set; }
         
-        [StringLength(4)]
+        [StringLength(5)]
         public string Extension { get; set; }
         
         public DateTime DateTime { get; set; }
