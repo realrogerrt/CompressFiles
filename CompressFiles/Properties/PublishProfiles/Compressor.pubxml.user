@@ -26,7 +26,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/08/2015 19:42:38</publishTime>
     </File>
     <File Include="bin/CompressFiles.dll">
-      <publishTime>04/01/2015 21:48:44</publishTime>
+      <publishTime>04/01/2015 22:14:07</publishTime>
     </File>
     <File Include="bin/CompressionAlgorithmCore.dll">
       <publishTime>03/09/2015 22:10:31</publishTime>
@@ -206,10 +206,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/08/2015 19:42:45</publishTime>
     </File>
     <File Include="Views/Account/Login.cshtml">
-      <publishTime>03/28/2015 18:18:38</publishTime>
+      <publishTime>04/01/2015 22:09:07</publishTime>
     </File>
     <File Include="Views/Account/Register.cshtml">
-      <publishTime>03/28/2015 16:39:27</publishTime>
+      <publishTime>04/01/2015 22:09:22</publishTime>
     </File>
     <File Include="Views/Account/ResetPassword.cshtml">
       <publishTime>03/08/2015 19:42:45</publishTime>
