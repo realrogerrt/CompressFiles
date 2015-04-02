@@ -6,15 +6,15 @@ by editing this MSBuild file. In order to learn more about this please visit htt
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>ftp://50.198.248.46/</_PublishTargetUrl>
+    <_PublishTargetUrl>ftp://50.198.248.45/</_PublishTargetUrl>
     <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAWaZU2tc22k+GH5hLxri3KQAAAAACAAAAAAAQZgAAAAEAACAAAAA79KjdVukfcffASwuV93kKExb+SxcgncZ1sv5A5WXCWAAAAAAOgAAAAAIAACAAAACM1GrgggUrwagYucXRHBJ23cjFT8BaLVKeHdmHqI6daSAAAAA06dHhWSKyooZNIrvt0eIj2bDSmoqdySIXeEL0+7QP8UAAAABWkDUjK0qYYAd5WTVXAdiQYQ58ettr4fiX5OMAZg2Jrbvg/qM2MMXTF5lFoi68PI53fCwVuKOAt/RwbN8B7bng</EncryptedPassword>
   </PropertyGroup>
   <ItemGroup>
     <File Include="App_Data/LocalDB.mdf">
-      <publishTime>03/31/2015 11:56:32</publishTime>
+      <publishTime>04/01/2015 21:48:50</publishTime>
     </File>
     <File Include="App_Data/LocalDB_log.ldf">
-      <publishTime>03/31/2015 11:56:32</publishTime>
+      <publishTime>04/01/2015 21:48:51</publishTime>
     </File>
     <File Include="App_Data/_SQLCompressDatabase.mdf">
       <publishTime>03/09/2015 13:04:06</publishTime>
@@ -26,13 +26,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/08/2015 19:42:38</publishTime>
     </File>
     <File Include="bin/CompressFiles.dll">
-      <publishTime>03/31/2015 22:06:26</publishTime>
+      <publishTime>04/01/2015 21:48:44</publishTime>
     </File>
     <File Include="bin/CompressionAlgorithmCore.dll">
       <publishTime>03/09/2015 22:10:31</publishTime>
     </File>
     <File Include="bin/CompressionCore.dll">
-      <publishTime>03/26/2015 11:44:38</publishTime>
+      <publishTime>04/01/2015 21:48:42</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>03/08/2015 19:42:47</publishTime>
@@ -152,7 +152,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/08/2015 19:42:20</publishTime>
     </File>
     <File Include="Scripts/indexAjaxHandler.js">
-      <publishTime>03/28/2015 15:57:02</publishTime>
+      <publishTime>03/31/2015 11:18:02</publishTime>
     </File>
     <File Include="Scripts/jquery-1.10.2.js">
       <publishTime>03/08/2015 19:42:22</publishTime>
@@ -236,7 +236,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/31/2015 14:00:35</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>03/31/2015 10:46:54</publishTime>
+      <publishTime>04/01/2015 09:47:37</publishTime>
     </File>
     <File Include="Views/Home/UnCompress.cshtml">
       <publishTime>03/31/2015 11:19:33</publishTime>
@@ -278,7 +278,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/08/2015 19:42:11</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>03/31/2015 11:56:36</publishTime>
+      <publishTime>04/01/2015 21:48:58</publishTime>
     </File>
   </ItemGroup>
 </Project>
