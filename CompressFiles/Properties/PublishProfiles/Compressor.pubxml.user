@@ -26,7 +26,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/08/2015 19:42:38</publishTime>
     </File>
     <File Include="bin/CompressFiles.dll">
-      <publishTime>04/02/2015 10:24:05</publishTime>
+      <publishTime>04/02/2015 12:13:30</publishTime>
     </File>
     <File Include="bin/CompressionAlgorithmCore.dll">
       <publishTime>03/09/2015 22:10:31</publishTime>
@@ -108,6 +108,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="bin/WebGrease.dll">
       <publishTime>03/08/2015 19:42:38</publishTime>
+    </File>
+    <File Include="ClassDiagram.cd">
+      <publishTime>04/02/2015 11:51:56</publishTime>
     </File>
     <File Include="Content/bootstrap.css">
       <publishTime>03/08/2015 19:42:20</publishTime>
@@ -233,7 +236,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/28/2015 11:17:10</publishTime>
     </File>
     <File Include="Views/Home/Historial.cshtml">
-      <publishTime>03/31/2015 14:00:35</publishTime>
+      <publishTime>04/02/2015 12:10:39</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
       <publishTime>04/01/2015 09:47:37</publishTime>
@@ -248,7 +251,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/08/2015 19:42:45</publishTime>
     </File>
     <File Include="Views/Manage/Index.cshtml">
-      <publishTime>03/08/2015 19:42:45</publishTime>
+      <publishTime>04/02/2015 12:24:23</publishTime>
     </File>
     <File Include="Views/Manage/ManageLogins.cshtml">
       <publishTime>03/08/2015 19:42:45</publishTime>
