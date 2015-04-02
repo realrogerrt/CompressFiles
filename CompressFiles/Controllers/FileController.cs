@@ -50,7 +50,7 @@ namespace CompressFiles.Controllers
 
         public JsonResult Converter()
         {
-            if (!Request.IsAjaxRequest() || getSessionData<bool>("copy"))
+            if (!Request.IsAjaxRequest() || !getSessionData<bool>("copy"))
             {
                 throw new Exception("Invalid Call!");
             }
@@ -117,7 +117,7 @@ namespace CompressFiles.Controllers
 
         public JsonResult UnCompressAsync()
         {
-            if (!Request.IsAjaxRequest() || getSessionData<bool>("copy_compressed"))
+            if (!Request.IsAjaxRequest() || !getSessionData<bool>("copy_compressed"))
             {
                 throw new Exception("Invalid Call!");
             }
@@ -136,7 +136,7 @@ namespace CompressFiles.Controllers
 
         public FileResult GetOriginal()
         {
-            if (getSessionData<bool>("convertion_compressed"))
+            if (!getSessionData<bool>("convertion_compressed"))
             {
                 throw new InvalidOperationException("File hasn't converted yet!");
             }

@@ -188,10 +188,6 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\LocalDB.mdf" />
-    <Content Include="App_Data\LocalDB_log.ldf">
-      <DependentUpon>LocalDB.mdf</DependentUpon>
-    </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\me.jpg" />
@@ -257,6 +253,7 @@
     <Content Include="Views\Home\Historial.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Data\" />
     <Folder Include="Views\File\" />
   </ItemGroup>
   <ItemGroup>
