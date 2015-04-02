@@ -86,7 +86,7 @@ namespace CompressFiles.Controllers
 
         public FileResult GetConvertedFile()
         {
-            if (getSessionData<bool>("convertion"))
+            if (!getSessionData<bool>("convertion"))
             {
                 throw new InvalidOperationException("File hasn't converted yet!");
             }
