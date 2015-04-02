@@ -27,10 +27,11 @@
                     @foreach (var item in Model)
                     {
                         var percent = (float)@item.ConvertedSize * 100 / (float)@item.OriginalSize;
+                        var extension = @item.FileName.Substring(@item.FileName.LastIndexOf("."));
                         percent = 100 - percent;
                         <tr>
                             <th>@item.FileName</th>
-                            <th>@item.Extension</th>
+                            <th>@extension</th>
                             <th>@item.DateTime</th>
                             <th>@item.OriginalSize Bytes</th>
                             <th>@item.ConvertedSize Bytes</th>

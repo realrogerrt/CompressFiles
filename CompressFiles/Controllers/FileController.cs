@@ -70,7 +70,6 @@ namespace CompressFiles.Controllers
                 ApplicationUser user = ac.Users.FirstOrDefault(x => x.Id == ID);
                 var toSave = new UploadedFile();
                 toSave.FileName = fileName;
-                toSave.Extension = fileName.Substring(fileName.LastIndexOf("."));
                 toSave.OriginalSize = (int)fileStream.Length; //Change to long both o' 'em
                 toSave.ConvertedSize = (int)output.Length;
                 toSave.DateTime = DateTime.Now;

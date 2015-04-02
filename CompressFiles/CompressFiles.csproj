@@ -183,6 +183,10 @@
     <Compile Include="Migrations\201504020253144_LargingExtension.Designer.cs">
       <DependentUpon>201504020253144_LargingExtension.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201504021612000_Normalize2ndForm.cs" />
+    <Compile Include="Migrations\201504021612000_Normalize2ndForm.Designer.cs">
+      <DependentUpon>201504021612000_Normalize2ndForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -202,6 +206,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="ClassDiagram.cd" />
     <None Include="Properties\PublishProfiles\Compressor.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\indexAjaxHandler.js" />
@@ -285,6 +290,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201504020253144_LargingExtension.resx">
       <DependentUpon>201504020253144_LargingExtension.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201504021612000_Normalize2ndForm.resx">
+      <DependentUpon>201504021612000_Normalize2ndForm.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
