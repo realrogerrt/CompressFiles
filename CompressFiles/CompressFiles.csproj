@@ -187,6 +187,10 @@
     <Compile Include="Migrations\201504021612000_Normalize2ndForm.Designer.cs">
       <DependentUpon>201504021612000_Normalize2ndForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201504021648231_ExtendingFileName.cs" />
+    <Compile Include="Migrations\201504021648231_ExtendingFileName.Designer.cs">
+      <DependentUpon>201504021648231_ExtendingFileName.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -293,6 +297,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201504021612000_Normalize2ndForm.resx">
       <DependentUpon>201504021612000_Normalize2ndForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201504021648231_ExtendingFileName.resx">
+      <DependentUpon>201504021648231_ExtendingFileName.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

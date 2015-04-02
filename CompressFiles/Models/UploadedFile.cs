@@ -12,7 +12,7 @@ namespace CompressFiles.Models
         [Key]
         public int ID { get; set; }
 
-        [StringLength(50)]
+        [StringLength(100)]
         [Required]
         public string FileName { get; set; }
         
