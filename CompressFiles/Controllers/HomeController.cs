@@ -39,6 +39,12 @@ namespace CompressFiles.Controllers
             var files = from f in ac.AllFiles where f.OwnerUser.Id == ID select f;
             return View(files.ToList());
         }
+
+        public ActionResult GitHub()
+        {
+            //
+            return Redirect("https://github.com/Rogerkael/CompressFiles");
+        }
     
     }
 }
