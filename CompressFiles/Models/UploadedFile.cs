@@ -6,7 +6,7 @@ using System.Linq;
 using System.Web;
 
 namespace CompressFiles.Models
-{
+{   //This file represents a uploaded file in the application.
     public class UploadedFile
     {
         [Key]
