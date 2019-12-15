@@ -1,4 +1,1 @@
-# CompressFiles
-Asp.net Web Application implementing a compression algorithm based in Huffman coding.
-Running on http://50.198.248.45
-Not finished yet, current status in http://50.198.248.45/home/about 
+I did this application a while back, it isn't running right now. I took down the windows server. Implementation of Huffman is on https://github.com/realrogerrt/CompressFiles/tree/master/CompressionCore directory
